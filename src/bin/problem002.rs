@@ -1,9 +1,9 @@
-fn get_fib_sum(num: i32, max: i32) -> i32 {
+fn get_fib_sum(num: u64, max: u64) -> u64 {
     let mut fibs = vec![num];
-    let first: i32 = num + num;
+    let first: u64 = num + num;
     fibs.push(first);
 
-    let mut last: i32 = *fibs.last().unwrap();
+    let mut last: u64 = *fibs.last().unwrap();
 
     while last < max {
         let second_to_last = &fibs[fibs.len() - 2..];
